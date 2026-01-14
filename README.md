@@ -1,4 +1,4 @@
-![FogSecurity-AI Banner](https://github.com/fatimalamgharee/FogSecurity-AI/raw/main/banner.png)
+![FogSecurity-AI Banner](https://raw.githubusercontent.com/fatimalamgharee/FogSecurity-AI/main/banner.png)
 # 🔐 FogSecurity-AI  
 **Integrated Security Framework for Fog Computing — Node Authentication & Session Continuity**  
 *MSc Thesis, Islamic University of Minnesota (IUM), 2026*  
