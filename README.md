@@ -1,7 +1,7 @@
 # 🔐 FogSecurity-AI  
 **Integrated Security Framework for Fog Computing — Node Authentication & Session Continuity**  
 *MSc Thesis, Islamic University of Minnesota (IUM), 2026*  
-By **Fatimah Lamgharee** | Supervisor: **Dr. Bushra Alshareef**
+By **Fatimah Lamgharee** | Supervisor: **Dr. Mohammed Ali**
 
 ---
 
