@@ -1,35 +1,36 @@
-# FogSecurity-AI
-**Integrated Security Model for Fog Computing**
+# 🔐 FogSecurity-AI  
+**Integrated Security Framework for Fog Computing — Node Authentication & Session Continuity**  
+*MSc Thesis, Islamic University of Minnesota (IUM), 2026*  
+By **Fatimah Lamgharee** | Supervisor: **Dr. Bushra Alshareef**
 
-## 🔐 Description
-This project implements a hybrid security model combining:
-- **Authentication Node Table (ANT):** prevents rogue node attacks using SHA-256 hashing.
-- **Mobility Tracker Protocol (MTP):** maintains session continuity during node handoff.
-- **Routing Table:** stores session states as JSON objects for rapid recovery.
+---
+
+## 🌍 Abstract
+Fog computing extends cloud capabilities to the edge of the network, providing low-latency processing for Internet of Things (IoT) systems.  
+However, this distributed model introduces severe risks such as rogue nodes and denial-of-service attacks.  
+This project proposes an integrated **security and availability model** featuring:
+
+- **Authentication Node Table (ANT):** Hash-based node validation using irreversible SHA-256 encryption.  
+- **Mobility Tracker Protocol (MTP):** Seamless session transfer between fog nodes under user mobility.  
+- **Routing Table:** JSON-based state storage ensuring uninterrupted service continuity.
+
+---
 
 ## ⚙️ Technologies
-- PHP 8
-- MySQL 8
-- Apache (XAMPP)
-- JSON for session serialization
+- **Backend:** PHP 8, MySQL 8  
+- **Server:** Apache (via XAMPP)  
+- **Language:** JSON for session serialization  
+- **Platform:** Microsoft Azure Simulation Environment
 
-## 🧪 How to Run
-1. Install **XAMPP** and start *Apache* and *MySQL*.
-2. Import `routing_table.sql` in phpMyAdmin.
-3. Place all files in the `htdocs/FogSecurity-AI/` folder.
-4. Visit [http://localhost/FogSecurity-AI/ANT.php](http://localhost/FogSecurity-AI/ANT.php) to register a node.
-5. Test the handoff simulation in `mobility_tracker.php`.
+---
 
-## 📊 Simulation Dataset
-Contains latency and reliability tests comparing cloud vs fog processing:
+## 🧪 Experimental Results
 | Metric | Cloud | Fog | Improvement |
-|---------|--------|------|-------------|
-| Retrieval (100MB) | 2.1s | 0.7s | 66% |
-| Handoff latency | 580ms | 150ms | 74% |
+|--------|--------|------|-------------|
+| File retrieval (100MB) | 2.1s | 0.7s | 66% faster |
+| Session handoff | 580ms | 150ms | 74% lower latency |
+| Unauthorized node detection | 0% | 100% blocked | Secure |
 
-## 📁 Author
-Fatimah Lamgharee — *MSc in Data Science & AI, Islamic University of Minnesota*
+---
 
-## 🔗 Publication
-This repository supports the master’s thesis:  
-“Security Issues in Fog Computing: An Integrated Model for Node Authentication and Service Availability” (2026)
+## 🧩 Folder Structure
