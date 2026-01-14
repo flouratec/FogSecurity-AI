@@ -1,0 +1,8 @@
+<?php
+$mac = $_POST['mac_address'];
+$hash = hash('sha256', $mac);
+$conn = new mysqli('localhost', 'root', '', 'fog_security');
+$sql = "INSERT INTO ant_table (node_mac, mac_hash, status) VALUES ('$mac', '$hash', 'Trusted')";
+$conn->query($sql);
+echo "Node registered securely.";
+?>
