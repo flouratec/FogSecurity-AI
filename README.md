@@ -36,3 +36,25 @@ This project presents an integrated **security and availability model** featurin
 ---
 
 ## 🧩 Folder Structure
+
+---
+
+## 🧠 Academic Context
+This repository supports the Master’s Thesis:  
+> *Security Issues in Fog Computing: An Integrated Model for Node Authentication and Service Availability (2026)*  
+
+Department of **Data Science and Artificial Intelligence**  
+**Islamic University of Minnesota (IUM)**
+
+---
+
+## 🧾 Citation
+If referencing this project, please cite as:  
+> Lamgharee, F. (2026). *Security Issues in Fog Computing: An Integrated Model for Node Authentication and Service Availability*. MSc Thesis, Islamic University of Minnesota.
+
+---
+
+## 📧 Contact
+For collaboration or academic inquiries:  
+📩 **fatimalamgharee@research.ium.edu**  
+🌐 GitHub: [github.com/fatimalamgharee](https://github.com/fatimalamgharee)
