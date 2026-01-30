@@ -1,82 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FogSecurity-AI | MSc Thesis Project</title>
-  <link rel="icon" type="image/png" href="banner-web.png" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0b1c2c;
-      color: white;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-    img.banner {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-bottom: 3px solid #00aaff;
-    }
-    header {
-      background-image: url('banner-web.png');
-      background-size: cover;
-      background-position: center;
-      height: 400px;
-      border-bottom: 3px solid #00aaff;
-    }
-    main {
-      padding: 40px;
-    }
-    h1 {
-      font-size: 2.5em;
-      color: #00aaff;
-    }
-    p, li {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-    a {
-      color: #00aaff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      color: #66ccff;
-    }
-    footer {
-      background-color: #091622;
-      padding: 15px;
-      border-top: 2px solid #00aaff;
-      margin-top: 40px;
-      font-size: 1em;
-      color: #00aaff;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>FogSecurity-AI Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{margin:0;font-family:Arial;background:#0b1220;color:#fff}
+header{display:flex;justify-content:space-between;align-items:center;padding:15px 25px;background:#111c36}
+.logo{font-weight:bold;font-size:20px;color:#4fc3f7}
+.btn{padding:8px 14px;border:none;border-radius:6px;background:#4fc3f7;color:#000;font-weight:bold;cursor:pointer}
+.container{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:20px}
+.card{background:#111c36;padding:15px;border-radius:10px}
+h2{margin-top:0}
+input{width:100%;padding:8px;margin-top:5px;margin-bottom:10px;border-radius:5px;border:none}
+.table{margin-top:10px;font-size:14px}
+.tag{padding:3px 8px;border-radius:12px;font-size:12px}
+.good{background:#1b5e20}
+.bad{background:#b71c1c}
+.chart{display:flex;gap:6px;height:100px;margin-top:10px}
+.bar{flex:1;background:#4fc3f7}
+footer{text-align:center;padding:10px;font-size:12px;color:#aaa}
+</style>
 </head>
 <body>
 
-  <!-- ✅ السطر الجديد لعرض البانر الفعلي -->
-  <img src="banner-web.png" alt="FogSecurity-AI MSc Thesis Banner" class="banner" />
+<header>
+<div class="logo">FogSecurity-AI</div>
+<button class="btn" onclick="simulate()">Simulate Attack</button>
+</header>
 
-  <main>
-    <h1>FogSecurity-AI</h1>
-    <p><strong>Integrated Security Framework for Fog Computing</strong></p>
-    <p><em>MSc Thesis Project – Islamic University of Minnesota, 2026</em></p>
-    <hr />
-    <p>This project provides a secure fog computing model featuring:</p>
-    <ul style="text-align:left; max-width:600px; margin:auto;">
-      <li>Authentication Node Table (ANT) for node validation</li>
-      <li>Mobility Tracker Protocol (MTP) for seamless session continuity</li>
-      <li>Routing Table for high availability and QoS</li>
-    </ul>
-    <p>🔗 <a href="https://github.com/fatimalamgharee/FogSecurity-AI" target="_blank">View on GitHub</a></p>
-  </main>
+<div class="container">
 
-  <footer>
-    <p>© 2026 FogSecurity-AI — Developed By <strong>Eng. Fatimah Lamgharee</strong></p>
-  </footer>
+<div class="card">
+<h2>Node Authentication (ANT)</h2>
+<input placeholder="Enter MAC Address">
+<button class="btn">Register Node</button>
+<div class="table">
+MAC: 00:1A:2B:3C:4D:5E — <span class="tag good">Trusted</span><br>
+MAC: 88:AF:91:77:BC:22 — <span class="tag bad">Banned</span>
+</div>
+</div>
+
+<div class="card">
+<h2>Session Mobility (MTP)</h2>
+<input placeholder="Session ID">
+<input placeholder="Fog Node">
+<button class="btn">Transfer Session</button>
+</div>
+
+<div class="card">
+<h2>AI Threat Analysis</h2>
+Active Nodes: 48<br>
+Anomalies: 2<br>
+Unauthorized Attempts: 5
+</div>
+
+<div class="card">
+<h2>System Performance</h2>
+Latency: 0.7s<br>
+Handoff: 150ms<br>
+Availability: 99.7%
+<div class="chart">
+<div class="bar" style="height:40%"></div>
+<div class="bar" style="height:70%"></div>
+<div class="bar" style="height:50%"></div>
+<div class="bar" style="height:80%"></div>
+<div class="bar" style="height:60%"></div>
+</div>
+</div>
+
+</div>
+
+<footer>
+FogSecurity-AI — AI-Driven Fog Computing Security Framework
+</footer>
+
+<script>
+function simulate(){
+alert("Simulated anomaly detected. Trust score reduced.");
+}
+</script>
+
 </body>
 </html>
