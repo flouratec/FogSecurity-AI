@@ -13,12 +13,12 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
 .card{background:#111c36;padding:15px;border-radius:10px}
 h2{margin-top:0}
 input{width:100%;padding:8px;margin-top:5px;margin-bottom:10px;border-radius:5px;border:none}
-.table{margin-top:10px;font-size:14px}
 .tag{padding:3px 8px;border-radius:12px;font-size:12px}
 .good{background:#1b5e20}
 .bad{background:#b71c1c}
 .chart{display:flex;gap:6px;height:100px;margin-top:10px}
 .bar{flex:1;background:#4fc3f7}
+a{color:#4fc3f7;text-decoration:none}
 footer{text-align:center;padding:10px;font-size:12px;color:#aaa}
 </style>
 </head>
@@ -26,39 +26,37 @@ footer{text-align:center;padding:10px;font-size:12px;color:#aaa}
 
 <header>
 <div class="logo">FogSecurity-AI</div>
-<button class="btn" onclick="simulate()">Simulate Attack</button>
+<div>
+<a href="architecture.html">Architecture</a> |
+<a href="algorithms.html">Algorithms</a> |
+<a href="about.html">About</a>
+</div>
 </header>
 
 <div class="container">
 
 <div class="card">
 <h2>Node Authentication (ANT)</h2>
-<input placeholder="Enter MAC Address">
-<button class="btn">Register Node</button>
-<div class="table">
 MAC: 00:1A:2B:3C:4D:5E — <span class="tag good">Trusted</span><br>
 MAC: 88:AF:91:77:BC:22 — <span class="tag bad">Banned</span>
-</div>
 </div>
 
 <div class="card">
 <h2>Session Mobility (MTP)</h2>
-<input placeholder="Session ID">
-<input placeholder="Fog Node">
-<button class="btn">Transfer Session</button>
+Active Sessions: 42<br>
+Handoff Delay: 150ms
 </div>
 
 <div class="card">
 <h2>AI Threat Analysis</h2>
 Active Nodes: 48<br>
-Anomalies: 2<br>
+Anomalies Detected: 2<br>
 Unauthorized Attempts: 5
 </div>
 
 <div class="card">
 <h2>System Performance</h2>
 Latency: 0.7s<br>
-Handoff: 150ms<br>
 Availability: 99.7%
 <div class="chart">
 <div class="bar" style="height:40%"></div>
@@ -71,15 +69,6 @@ Availability: 99.7%
 
 </div>
 
-<footer>
-FogSecurity-AI — AI-Driven Fog Computing Security Framework
-</footer>
-
-<script>
-function simulate(){
-alert("Simulated anomaly detected. Trust score reduced.");
-}
-</script>
-
+<footer>FogSecurity-AI Research Platform</footer>
 </body>
 </html>
