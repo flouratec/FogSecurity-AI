@@ -1,4 +1,10 @@
 ![FogSecurity-AI Banner](banner.png)
+# FogSecurity-AI
+
+![FogSecurity-AI Cover](assets/github_cover_dashboard.png)
+
+## Dashboard Preview
+![Dashboard Preview](assets/dashboard_quadrants.png)
 
 # 🔐 FogSecurity-AI  
 **Integrated Security Framework for Fog Computing — Node Authentication & Session Continuity**  
