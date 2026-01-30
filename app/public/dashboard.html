@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FogSecurity-AI Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">AI</div>
+      <div>
+        <div class="title">FogSecurity-AI</div>
+        <div class="subtitle">Intelligent Fog Security Dashboard</div>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn ghost" id="btnRefresh">Refresh</button>
+      <button class="btn" id="btnSimulate">Simulate Attack</button>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>ANT – Node Authentication</h2>
+      <div class="row">
+        <input id="macInput" placeholder="MAC Address (e.g., 00:1A:2B:3C:4D:5E)" />
+        <button class="btn" id="btnRegister">Register</button>
+        <button class="btn danger" id="btnRevoke">Revoke</button>
+      </div>
+      <div class="table" id="antTable"></div>
+      <div class="hint">Tip: registration hashes MAC using SHA-256.</div>
+    </section>
+
+    <section class="card">
+      <h2>MTP – Session Handoff</h2>
+      <div class="row">
+        <input id="sessionId" placeholder="Session ID (e.g., sess-001)" />
+        <input id="nodeId" placeholder="Fog Node (e.g., fog-node-3)" />
+        <button class="btn" id="btnPush">Push State</button>
+        <button class="btn ghost" id="btnPull">Pull State</button>
+      </div>
+      <pre class="codebox" id="sessionBox">{}</pre>
+    </section>
+
+    <section class="card">
+      <h2>AI Security Analysis (Demo)</h2>
+      <div class="kpis">
+        <div class="kpi"><div class="k">Active Nodes</div><div class="v" id="kActive">48</div></div>
+        <div class="kpi warn"><div class="k">Anomalies</div><div class="v" id="kAnom">2</div></div>
+        <div class="kpi"><div class="k">Unauthorized Attempts</div><div class="v" id="kUnauth">5</div></div>
+      </div>
+      <div class="alerts" id="alerts"></div>
+    </section>
+
+    <section class="card">
+      <h2>System Overview</h2>
+      <div class="kpis">
+        <div class="kpi"><div class="k">Latency</div><div class="v">0.7s</div></div>
+        <div class="kpi"><div class="k">Handoff</div><div class="v">150ms</div></div>
+        <div class="kpi"><div class="k">Uptime</div><div class="v">99.7%</div></div>
+      </div>
+      <div class="chart">
+        <div class="bar" style="--h:35%"></div>
+        <div class="bar" style="--h:55%"></div>
+        <div class="bar" style="--h:25%"></div>
+        <div class="bar" style="--h:70%"></div>
+        <div class="bar" style="--h:45%"></div>
+        <div class="bar" style="--h:62%"></div>
+        <div class="bar" style="--h:38%"></div>
+      </div>
+      <div class="hint">Chart is a lightweight visual (no libraries) for GitHub-friendly demo.</div>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
