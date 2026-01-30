@@ -1,0 +1,26 @@
+services:
+  web:
+    image: php:8.2-apache
+    container_name: fogsecurity_web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_NAME=fog_security
+      - DB_USER=root
+      - DB_PASS=root
+
+  db:
+    image: mysql:8.0
+    container_name: fogsecurity_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: fog_security
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
